@@ -1,5 +1,9 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
+
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     static void main(String[] args) {
 
@@ -19,7 +23,7 @@ public class Main {
 
             manager.add(null);
         } catch (IllegalArgumentException ex) {
-            manager.getLogger().error("Order nullable exception handled");
+            log.error("Order processing error: {}", ex.getMessage(), ex);
         }
 
     }
