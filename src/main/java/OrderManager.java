@@ -53,8 +53,8 @@ public class OrderManager {
         }
 
         System.out.println("Order queue:");
-        for (Map.Entry entry : orders.entrySet()) {
-            System.out.printf("%d - %s\n", entry.getKey(), ((Order) entry.getValue()).getName());
+        for (Map.Entry<Long, Order> entry : orders.entrySet()) {
+            System.out.printf("%d - %s\n", entry.getKey(), entry.getValue().getName());
         }
     }
 }
